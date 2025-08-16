@@ -1,0 +1,116 @@
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .code-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid #334155;
+        }
+
+        .html-tag {
+            color: #60a5fa;
+        }
+
+        .html-attr {
+            color: #f87171;
+        }
+
+        .html-text {
+            color: #d9f99d;
+        }
+
+        .html-comment {
+            color: #94a3b8;
+        }
+
+        .active-link {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+        }
+
+        .award-card {
+            perspective: 1000px;
+        }
+
+        .award-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .award-card:hover .award-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .award-front,
+        .award-back {
+            backface-visibility: hidden;
+        }
+
+        .award-back {
+            transform: rotateY(180deg);
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+                .award-item {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        .award-image {
+            transition: all 0.5s ease;
+            filter: grayscale(100%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .award-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .award-item:hover .award-overlay {
+            opacity: 1;
+        }
+        .award-item:hover .award-image {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        .award-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .award-item:hover .award-title {
+            transform: translateY(0);
+        }
