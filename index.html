@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,108 +10,71 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/tambahan.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
-<body class="bg-dark text-slate-200 font-sans">
-    <nav id="navbar"
-        class="fixed md:hidden text-slate-400 p-2 font-opensans bottom-0 inset-x-0 border-t-2 bg-slate-900 border-slate-700 z-30">
-        <div class="flex justify-between items-center">
-            <div class="flex-shrink-0 border-r-2 border-solid px-3 border-slate-700">
+<body class="bg-dark text-slate-200 ">
+    <nav class="bg-slate-900 text-slate-400 font-opensans fixed w-full z-30 border-b-2 border-slate-700">
+        <div class="hidden md:flex justify-center items-center p-4">
+            <div class="flex-shrink-0">
                 <div class="relative inline-block text-white font-bold text-xl">
-                    <span class="absolute top-0 -left-0.5 text-abugelap first-letter:text-abumuda">U</span>
-                    <span class="relative inline-block first-letter:text-abugelap">
-                        Undef
+                    <span class="absolute top-0 -left-0.5 text-abugelap md:hidden first-letter:text-abumuda">U</span>
+                    <span class="relative inline-block md:hidden first-letter:text-abugelap">
+                        UNDEFINED TEAM
                     </span>
                 </div>
             </div>
-            <div class="flex-1 scrollbar-hide overflow-x-auto">
-                <div class="flex space-x-4 pl-3">
-                    <a href="#home" class="p-3 md:p-4 md:hidden active-link">Home</a>
-                    <a href="#home" class="p-3 md:p-4 md:block hidden font-hand active-link">Undefined</a>
-                    <a href="#about" class="p-3 md:p-4">About</a>
-                    <a href="#projects" class="p-3 md:p-4">Projects</a>
-                    <a href="#awards" class="p-3 md:p-4">Awards</a>
+            <div class="flex space-x-6 justify-center items-center">
+                <a href="#home" class="p-2 hover:text-white">Home</a>
+                <a href="#about" class="p-2 hover:text-white">About</a>
+                <a href="#projects" class="p-2 hover:text-white">Projects</a>
+                <a href="#awards" class="p-2 hover:text-white">Awards</a>
+            </div>
+        </div>
+        <div class="md:hidden flex justify-between items-center p-4">
+            <div class="flex-shrink-0">
+                <div class="relative inline-block text-white font-bold text-xl">
+                    <span class="absolute top-0 -left-0.5 text-abugelap first-letter:text-abumuda">U</span>
+                    <span class="relative inline-block first-letter:text-abugelap">
+                        UNDEFINED TEAM
+                    </span>
                 </div>
+            </div>
+            <button id="mobile-menu-button" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
+            <div class="flex flex-col">
+                <a href="#home" class="p-4 border-b border-slate-700 hover:text-white">Home</a>
+                <a href="#about" class="p-4 border-b border-slate-700 hover:text-white">About</a>
+                <a href="#projects" class="p-4 border-b border-slate-700 hover:text-white">Projects</a>
+                <a href="#awards" class="p-4 border-b border-slate-700 hover:text-white">Awards</a>
             </div>
         </div>
     </nav>
-    <div id="desktop-nav" class="hidden md:flex fixed z-10 font-opensans">
-        <div class="h-screen overflow-y-auto bg-slate-900 sm:w-44 border-r border-slate-700">
-            <div class="py-8 flex justify-center :bg-slate-800 border-b border-slate-700">
-                <div class="flex flex-col items-center text-center text-white font-bold text-4xl">
-                    <div class="relative inline-block">
-                        <span class="absolute top-0 -left-1 text-purple-500 first-letter:text-putih">U</span>
-                        <span class="relative inline-block first-letter:text-abugelap">U</span>
-                    </div>
-                    <h1 class="text-slate-300 text-lg mt-2">Undefined</h1>
-                </div>
-            </div>
-            <div class="text-center text-slate-400">
-                <a href="#home" id="nav-home"
-                    class="p-3 md:p-4 block border-b border-slate-700 hover:text-putih">Home</a>
-                <a href="#about" id="nav-about"
-                    class="p-3 md:p-4 block border-b border-slate-700 hover:text-putih">About</a>
-                <a href="#projects" id="nav-projects"
-                    class="p-3 md:p-4 block border-b border-slate-700 hover:text-putih">Projects</a>
-                <a href="#awards" id="nav-awards"
-                    class="p-3 md:p-4 block border-b border-slate-700 hover:text-putih">Awards</a>
-                <div class="mt-4 p-3">
-                    <a href="#"
-                        class="p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
-                        <i class='bx bxl-facebook text-xl'></i>
-                    </a>
-                    <a href="#"
-                        class="p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
-                        <i class='bx bxl-instagram text-xl'></i>
-                    </a>
-                    <a href="#"
-                        class="p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
-                        <i class='bx bxl-youtube text-xl'></i>
-                    </a>
-                    <a href="#"
-                        class="p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
-                        <i class='bx bxl-github text-xl'></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="md:ml-44">
-        <!-- Hero Section -->
+    <div>
         <section id="home" class="min-h-screen flex flex-col items-center justify-center p-5 md:p-5" data-aos="fade-up">
             <div class="text-center mb-10">
-
-                <div class="flex justify-center my-8">
+                <div class="flex justify-center mt-10 my-8">
                     <div class="p-1 rounded-full">
                         <div class="rounded-full p-1">
-                            <div class="w-60 h-60 rounded-full flex items-center justify-center">
+                            <div class="w-60 h-60 md:w-100 md:h-100 rounded-full flex items-center justify-center">
                                 <img src="src/img/Logo with title.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <blockquote class="mt-8 text-Xl md:text-3xl italic font-handwrite text-slate-600">
+                <p class="mt-8 text-balance md:text-xl font-bold font-roboto text-slate-600">
                     "Together We Build, Together We Play."
-                </blockquote>
+                </p>
 
-                <div class="mt-12 font-mono text-sm md:text-base text-slate-500">
-                    <div class="code-bg rounded-lg p-5 text-left inline-block">
-                        <div class="html-comment">&lt;!-- Our journey starts with a single line of code --&gt;</div>
-                        <div>
-                            <span class="html-tag">function</span>
-                            <span class="html-text">createGame</span>() {<br>
-                            &nbsp;&nbsp;<span class="html-tag">let</span>
-                            <span class="html-text">passion</span> =
-                            <span class="html-attr">"unlimited"</span>;<br>
-                            &nbsp;&nbsp;<span class="html-tag">let</span>
-                            <span class="html-text">creativity</span> =
-                            <span class="html-attr">"boundless"</span>;<br>
-                            &nbsp;&nbsp;<span class="html-tag">return</span>
-                            <span class="html-text">passion</span> +
-                            <span class="html-text">creativity</span>;<br>
-                            }
-                        </div>
+                <div class="mt-10 font-bold font-mono text-sm md:text-base text-slate-100">
+                    <div class="code-bg rounded-lg p-3 px-5 text-left inline-block">
+                        <a href="#about">get to know us <i class='bx bx-right-arrow-alt ml-1'></i></a>
                     </div>
                 </div>
             </div>
@@ -124,46 +86,43 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-16 px-2 md:px-10 bg-slate-800">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-14 relative">
-                    <span class="relative text-putih font-opensans">About Our Team</span>
+                    <span class="relative text-putih font-roboto">About Us</span>
                 </h2>
                 <div class="bg-slate-900 text-slate-200 rounded-xl p-6 shadow-lg font-opensans" data-aos="fade-up">
                     <p class="text-lg leading-relaxed mb-8">
-                        Kami adalah tim pengembang game yang baru terbentuk dan masih berkembang, dipersatukan oleh satu
-                        visi:
-                        <span class="font-bold">membuat game yang benar-benar
-                            menyenangkan</span>.
+                        We're freshly-formed team of passionate game developers, united by a shared vision:
+                        <span class="font-bold">to make games that are genuinely fun.</span>.
                     </p>
 
                     <p class="text-lg leading-relaxed mb-8">
-                        Berawal dari sekumpulan teman kuliah, kami memang masih baru di industri ini, tetapi semangat
-                        dan ambisi kami sangat besar. Setiap proyek yang kami buat adalah langkah maju untuk menjadi
-                        lebih profesional. Kami terus belajar, bereksperimen, dan menantang diri sendiri untuk
-                        menghadapi setiap rintangan.
+                        Born from a group of university friends in 2025, we may be new to the industry, but our ambition
+                        runs deep.
+                        Every project we create is a step forward--learning, experimenting, and pushing ourselves past
+                        each challenge.
                     </p>
 
                     <p class="text-lg leading-relaxed mb-8">
-                        Saat ini, kami bekerja dengan sumber daya yang gratis, mengandalkan kreativitas dan tekad saja.
-                        Dukungan Anda sangat berarti bagi kami, baik dalam bentuk donasi, bimbingan, atau bahkan
-                        merekrut kami untuk sebuah proyek.
+                        Right now, we work with free resources, fueled by creativity and determination.
+                        Your support means the world to us--whether that's donating, mentoring, or even hiring us for a
+                        project.
                     </p>
 
                     <p class="text-lg leading-relaxed">
-                        Sambil menunggu momen itu tiba, silakan lihat karya terbaru kami dari berbagai game jam. Dari
-                        situ Anda bisa melihat bagaimana kami bekerja, berimajinasi, dan seberapa besar kecintaan kami
-                        dalam menghidupkan sebuah ide.
+                        Until then, take a look at our recent game creations. They're a glimpse into how we work, what
+                        we imagine, and how much
+                        we love bringing ideas to life.
                     </p>
                 </div>
-
-                <!-- Team Members -->
-                <h3 class="text-white text-2xl md:text-3xl font-opensans font-bold mt-20 mb-10 text-center">Meet the
-                    Team</h3>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-opensans">
-                    <!-- Team Member 1 -->
+            </div>
+        </section>
+        <section id="team" class=" md:px-10 bg-putih">
+            <h3 class="text-hitam text-2xl md:text-3xl font-roboto font-bold mt-15 mb-15 text-center">Meet the
+                Team</h3>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-opensans px-5">
                     <div class="team-member bg-slate-900 rounded-xl p-6 shadow-lg flex flex-col items-center"
                         data-aos="zoom-in">
                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-abumuda to-abugelap p-1 mb-4">
@@ -171,11 +130,9 @@
                         </div>
                         <div class="text-center">
                             <h4 class="font-bold text-xl text-putih">Salahudin Yusuf</h4>
-                            <p class="text-abusedang text-sm mt-2">Game Director</p>
+                            <p class="text-abusedang text-sm mt-2">All Role</p>
                         </div>
                     </div>
-
-                    <!-- Team Member 2 -->
                     <div class="team-member bg-slate-900 rounded-xl p-6 shadow-lg flex flex-col items-center"
                         data-aos="zoom-in" data-aos-delay="100">
                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-abumuda to-abugelap p-1 mb-4">
@@ -183,11 +140,9 @@
                         </div>
                         <div class="text-center">
                             <h4 class="font-bold text-xl text-putih">Surya Hadini Subagja</h4>
-                            <p class="text-abusedang text-sm mt-2">Game Programmer</p>
+                            <p class="text-abusedang text-sm mt-2">Programmer</p>
                         </div>
                     </div>
-
-                    <!-- Team Member 3 -->
                     <div class="team-member bg-slate-900 rounded-xl p-6 shadow-lg flex flex-col items-center"
                         data-aos="zoom-in" data-aos-delay="200">
                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-abumuda to-abugelap p-1 mb-4">
@@ -195,11 +150,9 @@
                         </div>
                         <div class="text-center">
                             <h4 class="font-bold text-xl text-putih">Winata Hadi Pratama</h4>
-                            <p class="text-abusedang text-sm mt-2">Game Programmer</p>
+                            <p class="text-abusedang text-sm mt-2">Programmer</p>
                         </div>
                     </div>
-
-                    <!-- Team Member 4 -->
                     <div class="team-member bg-slate-900 rounded-xl p-6 shadow-lg flex flex-col items-center"
                         data-aos="zoom-in" data-aos-delay="300">
                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-abumuda to-abugelap p-1 mb-4">
@@ -207,11 +160,9 @@
                         </div>
                         <div class="text-center">
                             <h4 class="font-bold text-xl text-putih">Aldi Alfariz</h4>
-                            <p class="text-abusedang text-sm mt-2">Artist/Designer</p>
+                            <p class="text-abusedang text-sm mt-2">Artist</p>
                         </div>
                     </div>
-
-                    <!-- Team Member 5 -->
                     <div class="team-member bg-slate-900 rounded-xl p-6 shadow-lg flex flex-col items-center"
                         data-aos="zoom-in" data-aos-delay="400">
                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-abumuda to-abugelap p-1 mb-4">
@@ -219,11 +170,9 @@
                         </div>
                         <div class="text-center">
                             <h4 class="font-bold text-xl text-putih">Ahmad Agung</h4>
-                            <p class="text-abusedang text-sm mt-2">Pixel Artist</p>
+                            <p class="text-abusedang text-sm mt-2">Artist</p>
                         </div>
                     </div>
-
-                    <!-- Team Member 6 -->
                     <div class="team-member bg-slate-900 rounded-xl p-6 shadow-lg flex flex-col items-center"
                         data-aos="zoom-in" data-aos-delay="500">
                         <div class="w-32 h-32 rounded-full bg-gradient-to-br from-abumuda to-abugelap p-1 mb-4">
@@ -237,20 +186,15 @@
                 </div>
             </div>
         </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-16 px-5 md:px-10">
+        <section id="projects" class="py-16 px-5 mt-15 md:px-10 bg-slate-800">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 relative">
-                    <span class="relative text-hitam font-opensans">Game Jam Projects</span>
+                    <span class="relative text-putih font-roboto">Projects</span>
                 </h2>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
                     <div class="game-card bg-slate-900 rounded-xl overflow-hidden font-opensans shadow-lg flex flex-col h-full"
                         data-aos="fade-up">
                         <div class="relative">
-                            <!-- Ikon Lomba -->
                             <div
                                 class="absolute top-3 left-3 z-10 w-13 h-13 flex items-center justify-center shadow-lg">
                                 <img src="/src/lomba/selasar.png" alt="Game Jam Icon" class="w-12 h-12 object-contain">
@@ -265,9 +209,9 @@
                                 <span class="bg-abumuda text-abugelap text-xs px-2 py-1 rounded">Horror</span>
                             </div>
                             <p class="text-slate-400 mb-4 flex-grow">
-                                Dunia telah runtuh. jalanan dipenuhi reruntuhan, dan monster mengerikan berkeliaran di
-                                mana-mana. Tak seorang pun tahu dari mana asal makhluk-makhluk ini—yang jelas, mereka
-                                memburu apa saja yang masih hidup.
+                                The world has collapsed. the streets were filled with ruins, and terrible monsters
+                                roamed everywhere. No one knows where these creatures come from—what is clear is that
+                                they hunt anything that's still alive.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">Survival</span>
@@ -280,12 +224,9 @@
                             </a>
                         </div>
                     </div>
-
-                    <!-- Project 2 -->
                     <div class="game-card bg-slate-900 rounded-xl overflow-hidden shadow-lg flex flex-col h-full"
                         data-aos="fade-up" data-aos-delay="100">
                         <div class="relative">
-                            <!-- Ikon Lomba -->
                             <div
                                 class="absolute top-3 left-3 z-10 w-13 h-13 flex items-center justify-center shadow-lg">
                                 <img src="/src/lomba/live2dev.png" alt="Game Jam Icon" class="w-12 h-12 object-contain">
@@ -300,15 +241,14 @@
                                 <span class="bg-abumuda text-abugelap text-xs px-2 py-1 rounded">Puzzle</span>
                             </div>
                             <p class="text-slate-400 mb-4 flex-grow">
-                                Kamu terjebak dalam dimensi misterius dan berbahaya yang dipenuhi teka-teki dan anomali
-                                aneh. Tujuan utama adalah melarikan diri dari dimensi tersebut dengan menyelesaikan
-                                puzzle di setiap level.
+                                You're trapped in a mysterious and dangerous dimension filled with puzzles and strange
+                                anomalies. Your main goal is to escape the dimension by solving the puzzles in each
+                                level.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">Platformer</span>
-                                <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">Time Loop</span>
-                                <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">Dimension
-                                    Shift</span>
+                                <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">Exploration</span>
+                                <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">RPG</span>
+                                <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">Puzzle</span>
                             </div>
                             <a href="https://penguinmalaz.itch.io/looping-life-dimensional-escape" target="_blank"
                                 class="block w-full bg-abumuda hover:bg-abugelap text-hitam text-center py-2 rounded-lg transition">
@@ -316,8 +256,6 @@
                             </a>
                         </div>
                     </div>
-
-                    <!-- Project 3 -->
                     <div class="game-card bg-slate-900 rounded-xl overflow-hidden shadow-lg flex flex-col h-full"
                         data-aos="fade-up" data-aos-delay="200">
                         <div class="relative">
@@ -334,8 +272,8 @@
                                 <span class="bg-abumuda text-abugelap text-xs px-2 py-1 rounded">Adventure</span>
                             </div>
                             <p class="text-slate-400 mb-4 flex-grow">
-                                The Potion Q adalah gamesimulasi RPG yang dimana tokoh utamanya adalah seorang Pembuat
-                                potion. Di game ini player diharuskan membuat potion sesuai pesanan dari client.
+                                The Potion Q is a simulation RPG where the main character is a potion maker. In this
+                                game, players are required to create potions according to client orders.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-slate-800 text-slate-300 text-xs px-2 py-1 rounded">RPG</span>
@@ -352,15 +290,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- Awards Section -->
-        <section id="awards" class="py-16 px-5 md:px-10 bg-slate-800">
+        <section id="awards" class=" px-5 md:px-10 bg-slate-800">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 relative">
-                    <span class="relative font-opensans">Press & Awards</span>
+                    <span class="relative font-opensans">Achievement</span>
                 </h2>
-                <div class="flex flex-col lg:flex-row gap-8 items-center">
-                    <!-- Game Cover Image -->
+                <div class="flex flex-col lg:flex-row gap-8 items-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-full lg:w-1/2">
                         <div
                             class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl overflow-hidden shadow-2xl">
@@ -368,18 +303,14 @@
                                 class="w-full h-auto object-cover ">
                         </div>
                     </div>
-
-                    <!-- Game Info -->
                     <div class="w-full lg:w-1/2">
                         <div class="space-y-6">
                             <div>
                                 <img src="/src/games/loopinglifetitle.png" alt="">
                             </div>
-
                             <div class="bg-slate-800 rounded-lg">
                                 <p class="font-semibold text-putih">Award: 2nd Place Winner in 3 categories</p>
                             </div>
-
                             <p class="text-slate-400">
                                 Created in just 2 days for Live2Dev Game Jam 2025 under the theme
                                 <span class="font-semibold text-putih">'Cost'</span>.
@@ -389,58 +320,59 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid mt-8 grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Award 1 -->
+                <div class="grid mt-8 grid-cols-1 md:grid-cols-3 gap-8 font-roboto" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="award-item aspect-w-4 aspect-h-3">
                         <img src="src/awards/Kategori Njess.png" alt="Best Game Design" class="award-image">
                         <div class="award-overlay">
-                            <div class="award-title">Kategori Njess</div>
+                            <div class="award-title">Njess Category</div>
                         </div>
                     </div>
-
-                    <!-- Award 2 -->
                     <div class="award-item aspect-w-4 aspect-h-3">
                         <img src="src/awards/Kategori Quiver.png" alt="Best Visual Art" class="award-image">
                         <div class="award-overlay">
-                            <div class="award-title">Kategori Quiver</div>
+                            <div class="award-title">Quiver Category</div>
                         </div>
                     </div>
-
-                    <!-- Award 3 -->
                     <div class="award-item aspect-w-4 aspect-h-3">
                         <img src="src/awards/Kategori Raveanne.png" alt="Most Innovative Gameplay" class="award-image">
                         <div class="award-overlay">
-                            <div class="award-title">Kategori Raveanne</div>
+                            <div class="award-title">Raveanne Category</div>
                         </div>
                     </div>
                 </div>
             </div>
     </div>
     </section>
-    <!-- Footer -->
-    <footer class="py-10 px-5 md:px-10 bg-slate-900 border-t border-slate-800">
+    <footer class="py-10  md:px-10 bg-slate-800 border-t border-slate-800">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between px-5">
                 <div class="mb-6 md:mb-0">
                     <div class="flex items-center">
                         <div>
-                            <h3 class="text-xl font-bold">Undefined Team</h3>
-                            <p class="text-slate-400 text-sm">Together We Build, Together We
-                                Play</p>
+                            <h3 class="text-xl font-bold font-roboto">Undefined Team</h3>
+                            <p class="text-slate-400 text-sm font-roboto">Together We Build, Together We Play</p>
                         </div>
                     </div>
                 </div>
-
+                <div class="flex space-x-4 mb-6 md:mb-0">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors duration-300">
+                        <i class='bx bxl-instagram text-2xl'></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors duration-300">
+                        <i class='bx bxl-linkedin-square text-2xl'></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="mt-10 pt-6 border-t border-slate-800 text-center text-slate-400 text-sm">
+            <div class="md:mt-10 pt-6 border-t border-slate-800 text-center text-slate-400 text-sm">
                 <p>&copy; 2024 Undefined Team. All rights reserved.</p>
             </div>
         </div>
     </footer>
     </div>
     <script src="app.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 800,
